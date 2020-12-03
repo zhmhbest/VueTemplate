@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "allowJs": false,
+        "skipLibCheck": true,
+        "target": "ES5",
+        "sourceMap": true,
+        "rootDir": "src",
+        "strict": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "noUnusedParameters": true,
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
