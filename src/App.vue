@@ -4,16 +4,17 @@
     </div>
 </template>
 
-<script>
+<script lang='ts'>
     export default {
         name: 'App',
         mounted() {
-            console.log("Hello Vue");
+            const hello: string = "Hello Vue!";
+            console.log(hello);
         }
     }
 </script>
 
-<style lang="scss">
+<style lang='scss'>
     #app {
         h2 {
             color: lightseagreen;

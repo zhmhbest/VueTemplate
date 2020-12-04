@@ -3,7 +3,7 @@ import './index.scss'
 // @ts-ignore
 document.querySelector("head link[rel='shortcut icon']").href = require("./favicon.ico").default;
 // @ts-ignore
-document.querySelector("head title").innerHTML = "标题";
+document.querySelector("head title").innerHTML = "Hello Vue";
 
 
 // 应用Vue
