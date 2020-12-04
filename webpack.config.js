@@ -10,8 +10,6 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
-
-
 module.exports = {
     mode: isProd ? 'production' : 'development',
     entry: {
