@@ -64,12 +64,12 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpe?g|gif|icon)$/i,
+                test: /\.(png|jpe?g|gif|icon?)$/i,
                 use: [
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 4096, // 小于该值（Byte）是base64字符串
+                            limit: 1024 * 8, // 小于8KB则返回base64字符串
                             name: isProd ?
                                 'static/images/[name].[ext]'
                                 :

@@ -1,28 +1,16 @@
-// Hello
-const sayHello = () => {
-    console.log('Hello');
-}
-sayHello();
+// 加载通用设置
+import './index.scss'
+// @ts-ignore
+document.querySelector("head link[rel='shortcut icon']").href = require("./favicon.ico").default;
+// @ts-ignore
+document.querySelector("head title").innerHTML = "标题";
 
-// json5-loader
-console.log(require("./config.json5").default)
 
-// url-loader
-const img = document.createElement('img');
-img.src = require("./images/arrow_girl.png").default;
-document.body.appendChild(img);
-
-// css-loader
-import "./style/0.css"
-import "./style/1.scss"
-
-// vue-loader
+// 应用Vue
 import Vue from 'vue'
-const App = require('./App.vue').default;
+const App = require('./App').default;
 new Vue({
     el: '#app',
     components: {App},
     template: '<App/>'
 });
-
-

@@ -1,18 +1,24 @@
 <template>
     <div id='app'>
-        Hello Vue
+        <h2>Hello Vue</h2>
     </div>
 </template>
 
 <script>
     export default {
         name: 'App',
+        mounted() {
+            console.log("Hello Vue");
+        }
     }
 </script>
 
 <style lang="scss">
     #app {
-        text-align: center;
-        color: cadetblue;
+        h2 {
+            color: lightseagreen;
+            background-color: bisque;
+            text-align: center;
+        }
     }
 </style>

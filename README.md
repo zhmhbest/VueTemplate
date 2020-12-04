@@ -1,4 +1,4 @@
-# Front-end Template
+# VueTemplate
 
 手动搭建一个使用Webpack打包的，支持Typescript、Vue3、Sass等技术的前端开发模板。
 
@@ -32,6 +32,9 @@ npx webpack-dev-server --inline --progress
 ## Build
 
 ```bash
+# prod
 npx cross-env NODE_ENV=production webpack
-# npx cross-env NODE_ENV=development webpack
+
+# dev
+npx cross-env NODE_ENV=development webpack
 ```
