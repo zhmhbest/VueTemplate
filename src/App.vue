@@ -17,12 +17,21 @@
 
 <script lang='ts'>
     export default {
-        name: 'app'
+        name: 'app',
+        mounted() {
+            // @ts-ignore
+            document.querySelector('#app').style.height = 
+                `${document.documentElement.clientHeight}px`;
+        }
     }
 </script>
 
 <style lang='scss'>
     #app {
+        display: flex;
+        flex-direction: column;
+        background-color: gray;
+        // height: 100%;
         .frame-top {
             display: flex;
             background-color: cornflowerblue;
@@ -36,6 +45,7 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
+            height: 100%;
         }
         .frame-left {
             display: inline-block;
