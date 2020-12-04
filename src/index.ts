@@ -5,12 +5,15 @@ document.querySelector("head link[rel='shortcut icon']").href = require("./favic
 // @ts-ignore
 document.querySelector("head title").innerHTML = "Hello Vue";
 
-
 // 应用Vue
 import Vue from 'vue'
-const App = require('./App').default;
+import App from "./App.vue"
+import store from './store'
+import router from './router'
+
+console.log(store);
+console.log(router);
+
 new Vue({
-    el: '#app',
-    components: {App},
-    template: '<App/>'
-});
+    render: h => h(App)
+}).$mount('#app');

@@ -6,7 +6,7 @@
 
 <script lang='ts'>
     export default {
-        name: 'App',
+        name: 'app',
         mounted() {
             const hello: string = "Hello Vue!";
             console.log(hello);
