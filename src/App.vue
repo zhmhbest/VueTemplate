@@ -1,6 +1,11 @@
 <template>
     <div id='app'>
-        <div class="frame-top">Top</div>
+        <div class="frame-top">
+            <ul>
+                <li><a href="#/">Home</a></li>
+                <li><a href="#/about">About</a></li>
+            </ul>
+        </div>
         <div class="container-col">
             <div class="frame-left">Left</div>
             <div class="frame-main"><router-view/></div>

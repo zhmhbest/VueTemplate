@@ -1,8 +1,9 @@
 <template>
-    <div>
+    <div id="home">
         <h2>Hello Vue</h2>
-        <img alt="" src="static/images/arrow_girl.png">
-        <a href="#/about">About</a>
+        <div>
+            <img alt="" src="static/images/arrow_girl.png">
+        </div>
     </div>
 </template>
 
@@ -17,11 +18,13 @@
 </script>
 
 <style lang='scss'>
-    #app {
+    #home {
         h2 {
-            color: lightseagreen;
-            background-color: bisque;
             text-align: center;
+        }
+        div {
+            display: flex;
+            justify-content: center;
         }
     }
 </style>
