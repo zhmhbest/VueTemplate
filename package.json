@@ -26,6 +26,7 @@
     "html-webpack-plugin": "^4.5.0",
     "json5-loader": "^4.0.1",
     "mini-css-extract-plugin": "^1.3.1",
+    "open-browser-webpack-plugin": "0.0.5",
     "sass": "npm:dart-sass@^1.25.0",
     "sass-loader": "^10.1.0",
     "ts-loader": "^8.0.11",

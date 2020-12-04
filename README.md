@@ -10,6 +10,7 @@ npm init -f
 npm -D i cross-env
 npm -D i webpack@4 webpack-cli@3
 npm -D i webpack-dev-server@3 html-webpack-plugin@4
+npm -D i open-browser-webpack-plugin
 # Assets
 npm -D i copy-webpack-plugin
 # Typescript

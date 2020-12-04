@@ -2,11 +2,15 @@ const path = require('path');
 const root = path.resolve(__dirname);
 const isProd = 'production' === process.env['NODE_ENV'] ? true : false;
 const isDev = !isProd;
+const devPort = 9000;
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+
+
 
 module.exports = {
     mode: isProd ? 'production' : 'development',
@@ -20,7 +24,7 @@ module.exports = {
             'static/js/[name]-[hash].js'
     },
     devServer: {
-        port: 9000,
+        port: devPort,
         progress: true,
         contentBase: false, //已经拷贝
         compress: true
@@ -40,6 +44,9 @@ module.exports = {
                 collapseWhitespace: isProd,     // 删除换行
                 hash: isDev
             }
+        }),
+        new OpenBrowserPlugin({
+            url: `http://localhost:${devPort}/`
         }),
         new MiniCssExtractPlugin({
             filename: isProd ?
