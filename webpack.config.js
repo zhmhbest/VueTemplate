@@ -29,7 +29,7 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [{
                 from: 'src/assets',
-                to: 'static/assets'
+                to: '.'
             }, ]
         }),
         new HtmlWebpackPlugin({

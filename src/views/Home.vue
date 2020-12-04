@@ -1,7 +1,8 @@
 <template>
     <div>
         <h2>Hello Vue</h2>
-        <img alt="" src="static/assets/images/arrow_girl.png">
+        <img alt="" src="static/images/arrow_girl.png">
+        <a href="#/about">About</a>
     </div>
 </template>
 
