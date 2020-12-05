@@ -1,10 +1,8 @@
 <template>
     <div id="app">
         <div class="frame-top">
-            <ul>
-                <li><a href="#/">Home</a></li>
-                <li><a href="#/about">About</a></li>
-            </ul>
+            <a-button type="primary" value="small" href="#/">Home</a-button>
+            <a-button type="primary" value="small" href="#/about">About</a-button>
         </div>
         <div class="frame-medium">
             <div class="frame-left">Left</div>
