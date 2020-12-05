@@ -7,10 +7,10 @@
     </div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
     import $$ from "../library"
     export default {
-        name: 'home',
+        name: "home",
         mounted() {
             const hello: string = "Hello Vue!";
             console.log(hello);
@@ -19,7 +19,7 @@
     }
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
     #home {
         h2 {
             text-align: center;

@@ -1,5 +1,5 @@
 <template>
-    <div id='app'>
+    <div id="app">
         <div class="frame-top">
             <ul>
                 <li><a href="#/">Home</a></li>
@@ -15,17 +15,17 @@
     </div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
     export default {
-        name: 'app',
+        name: "app",
         mounted() {
             // @ts-ignore
-            document.querySelector('#app').style['height'] = `${document.documentElement.clientHeight}px`;
+            document.querySelector("#app").style["height"] = `${document.documentElement.clientHeight}px`;
         }
     }
 </script>
 
-<style lang='scss'>
+<style lang="scss">
     #app {
         display: flex;
         flex-direction: column;

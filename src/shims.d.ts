@@ -1,2 +1,2 @@
-declare module '*.vue'
+declare module "*.vue"
 // declare var $: JQueryStatic;
