@@ -17,10 +17,11 @@
     }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
     #home {
         h2 {
             text-align: center;
+            color: darkmagenta;
         }
         div {
             display: flex;

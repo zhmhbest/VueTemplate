@@ -6,6 +6,14 @@
 
 <script lang='ts'>
     export default {
-        name: 'about'
+        name: 'about',
+        mounted() {
+            console.log("About");
+            // @ts-ignore
+            this.$$.sayHello();
+        }
     }
 </script>
+
+<style lang='scss' scoped>
+</style>

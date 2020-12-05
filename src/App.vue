@@ -6,7 +6,7 @@
                 <li><a href="#/about">About</a></li>
             </ul>
         </div>
-        <div class="container-col">
+        <div class="frame-medium">
             <div class="frame-left">Left</div>
             <div class="frame-main"><router-view/></div>
             <div class="frame-right">Right</div>
@@ -20,8 +20,7 @@
         name: 'app',
         mounted() {
             // @ts-ignore
-            document.querySelector('#app').style.height = 
-                `${document.documentElement.clientHeight}px`;
+            document.querySelector('#app').style['height'] = `${document.documentElement.clientHeight}px`;
         }
     }
 </script>
@@ -31,7 +30,6 @@
         display: flex;
         flex-direction: column;
         background-color: gray;
-        // height: 100%;
         .frame-top {
             display: flex;
             background-color: cornflowerblue;
@@ -40,7 +38,7 @@
             display: flex;
             background-color: palevioletred;
         }
-        .container-col {
+        .frame-medium {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;

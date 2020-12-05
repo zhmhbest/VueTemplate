@@ -15,4 +15,4 @@ addView('About');
 
 export default new VueRouter({
     routes
-})
+});
