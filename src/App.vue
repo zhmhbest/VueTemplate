@@ -32,11 +32,11 @@
         background-color: gray;
         .frame-top {
             display: flex;
-            background-color: cornflowerblue;
+            background-color: palevioletred;
         }
         .frame-bottom {
             display: flex;
-            background-color: palevioletred;
+            background-color: cornflowerblue;
         }
         .frame-medium {
             display: flex;

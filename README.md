@@ -24,7 +24,9 @@ npm -D i mini-css-extract-plugin css-loader
 npm -D i sass-loader sass@npm:dart-sass
 # Vue
 npm -D i vue-loader vue-template-compiler
-npm -S i vue vue-router vuex
+npm -S i vue vue-router vue
+# Ant Design
+npm -S i ant-design-vue
 ```
 
 ## Dev
