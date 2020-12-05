@@ -2,12 +2,6 @@ function sayHello() {
     console.log("Library");
 }
 
-const library = {
+export default {
     sayHello
 }
-
-export default {
-    install: (Vue: any) => {
-        Vue.prototype.$$ = library;
-    }
-};

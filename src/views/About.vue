@@ -6,12 +6,7 @@
 
 <script lang='ts'>
     export default {
-        name: 'about',
-        mounted() {
-            console.log("About");
-            // @ts-ignore
-            this.$$.sayHello();
-        }
+        name: 'about'
     }
 </script>
 

@@ -8,11 +8,13 @@
 </template>
 
 <script lang='ts'>
+    import $$ from "../library"
     export default {
         name: 'home',
         mounted() {
             const hello: string = "Hello Vue!";
             console.log(hello);
+            $$.sayHello();
         }
     }
 </script>
