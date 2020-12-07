@@ -10,10 +10,8 @@ npm init -f
 npm -D i cross-env
 npm -D i webpack@4 webpack-cli@3
 npm -D i webpack-dev-server@3 html-webpack-plugin@4
-npm -D i open-browser-webpack-plugin
 npm -D i copy-webpack-plugin
-# Typescript
-npm -D i typescript ts-loader
+npm -D i open-browser-webpack-plugin
 # Json5
 npm -D i json5-loader
 # Images
@@ -21,27 +19,34 @@ npm -D i url-loader
 # Style
 npm -D i mini-css-extract-plugin css-loader
 npm -D i sass-loader sass@npm:dart-sass
-# Vue
-# npm -D i vue-template-compiler 
-npm -D i vue-loader vue-template-compiler
-npm -S i vue vue-router vue
-# Ant Design
-npm -S i ant-design-vue
+# Typescript
+npm -D i @types/node
+npm -D i typescript ts-loader
+# Vue2
+# npm -D i vue-loader@15 vue-template-compiler@2
+# npm -S i vue@2 vue-router@3 vuex@3
+# Vue3
+npm -D i vue-loader@16 @vue/compiler-sfc@3
+npm -S i vue@3 vue-router@4 vuex@4
+# Antd1
+npm -S i ant-design-vue@1
 ```
 
-## Dev
+## Scripts
 
 ```bash
+# dev
 npx webpack-dev-server --inline --progress
-# http://localhost:9000/
-```
 
-## Build
-
-```bash
-# prod
+# build.prod
 npx cross-env NODE_ENV=production webpack
 
-# dev
+# build.dev
 npx cross-env NODE_ENV=development webpack
+```
+
+## Run
+
+```bash
+npm run dev
 ```

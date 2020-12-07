@@ -1,7 +1,7 @@
 {
   "name": "vue-template",
   "version": "1.0.0",
-  "description": "手动搭建一个使用Webpack打包的，支持Typescript、Vue3、Sass等技术的前端开发模板。",
+  "description": "手动搭建一个使用Webpack打包的，支持Typescript、Sass、Vue、Ant Design等技术的前端开发模板。",
   "main": "src/index.ts",
   "scripts": {
     "dev": "npx webpack-dev-server --inline --progress",

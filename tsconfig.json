@@ -8,16 +8,21 @@
         "moduleResolution": "node",
         "sourceMap": true,
         "rootDir": "src",
+
+        // 严格检查
         "strict": true,
+        "strictNullChecks": false,
         "noFallthroughCasesInSwitch": true,
         "noImplicitReturns": true,
         "noUnusedParameters": true,
+        "noUnusedLocals": true
     },
     "include": [
         "src/**/*.ts",
         "src/**/*.vue",
     ],
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "dist"
     ]
 }
