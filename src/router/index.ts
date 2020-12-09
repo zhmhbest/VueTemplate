@@ -4,7 +4,7 @@ Vue.use(VueRouter);
 const routes: Array<RouteConfig> = [];
 function addView(name: string, url?: string) {
     routes.push({
-        path: undefined===url ? `/${name.toLowerCase()}` : `${url}`,
+        path: undefined === url ? `/${name.toLowerCase()}` : `${url}`,
         name: name,
         component: () => import(`../views/${name}.vue`)
     });
