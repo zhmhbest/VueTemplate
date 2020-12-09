@@ -16,7 +16,8 @@
 </template>
 
 <script lang="ts">
-export default {
+import $$ from "./library";
+export default $$.Vue.extend({
     name: "app",
     mounted() {
         // @ts-ignore
@@ -24,10 +25,10 @@ export default {
             "height"
         ] = `${document.documentElement.clientHeight}px`;
     },
-};
+});
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #app {
     display: flex;
     flex-direction: column;

@@ -11,7 +11,14 @@
 import $$ from "../library";
 export default $$.Vue.extend({
     name: "home",
-    mounted() {},
+    data() {
+        return {
+            hello: "Hello Home",
+        };
+    },
+    mounted() {
+        console.log(this.hello);
+    },
 });
 </script>
 
