@@ -1,6 +1,6 @@
 import VueRouter, { RouteConfig } from 'vue-router'
 import Vue from 'vue'
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 const routes: Array<RouteConfig> = [];
 function addView(name: string, url?: string) {
     routes.push({
