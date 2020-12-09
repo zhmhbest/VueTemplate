@@ -12,6 +12,8 @@ function addView(name: string, url?: string) {
 
 addView('Home', '/');
 addView('About');
+addView('demo/Axios');
+addView('demo/Echarts');
 
 export default new VueRouter({
     routes

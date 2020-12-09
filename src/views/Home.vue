@@ -13,7 +13,7 @@ export default $$.Vue.extend({
     name: "home",
     data() {
         return {
-            hello: "Hello Home",
+            hello: "Hello Home" as String,
         };
     },
     mounted() {

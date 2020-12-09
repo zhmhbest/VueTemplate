@@ -10,7 +10,7 @@ export default $$.Vue.extend({
     name: "about",
     data() {
         return {
-            hello: "Hello About",
+            hello: "Hello About" as String,
         };
     },
     mounted() {
@@ -21,6 +21,6 @@ export default $$.Vue.extend({
 
 <style lang="scss" scoped>
 h2 {
-    color: hotpink;
+    color: darkgreen;
 }
 </style>

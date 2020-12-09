@@ -23,13 +23,17 @@ npm -D i sass-loader sass@npm:dart-sass
 npm -D i @types/node
 npm -D i typescript ts-loader
 # Vue2
-# npm -D i vue-loader@15 vue-template-compiler@2
-# npm -S i vue@2 vue-router@3 vuex@3
+npm -D i vue-loader@15 vue-template-compiler@2
+npm -S i vue@2 vue-router@3 vuex@3
 # Vue3
-npm -D i vue-loader@16 @vue/compiler-sfc@3
-npm -S i vue@3 vue-router@4 vuex@4
+# npm -D i vue-loader@16 @vue/compiler-sfc@3
+# npm -S i vue@3 vue-router@4 vuex@4
 # Antd1
 npm -S i ant-design-vue@1
+# axios
+npm -S i axios
+# echarts
+npm -S i echarts
 ```
 
 ## Scripts
