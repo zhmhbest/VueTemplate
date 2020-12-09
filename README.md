@@ -2,7 +2,37 @@
 
 手动搭建一个使用[Webpack](https://www.webpackjs.com/concepts/)打包的，支持[Typescript](https://www.tslang.cn/docs/home.html)、[Sass](https://www.sass.hk/)、[Vue](https://cn.vuejs.org/)、[Ant Design](https://www.antdv.com/docs/vue/introduce-cn/)等技术的前端开发模板。
 
-## Ready
+## 直接使用
+
+使用Yarn
+
+```bash
+# 准备环境
+yarn install
+
+# 调试
+yarn run dev
+
+# 打包
+yarn run build
+```
+
+使用Npm
+
+```bash
+# 准备环境
+npm install
+
+# 调试
+npm run dev
+
+# 打包
+npm run build
+```
+
+## 创建过程
+
+### Packages
 
 ```bash
 npm init -f
@@ -36,7 +66,7 @@ npm -S i axios
 npm -S i echarts
 ```
 
-## Scripts
+### Scripts
 
 ```bash
 # dev
@@ -47,10 +77,4 @@ npx cross-env NODE_ENV=production webpack
 
 # build.dev
 npx cross-env NODE_ENV=development webpack
-```
-
-## Run
-
-```bash
-npm run dev
 ```
