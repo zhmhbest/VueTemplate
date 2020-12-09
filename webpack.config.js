@@ -16,13 +16,20 @@ const [cdnExternals, cdnResources] = (() => {
     let resources = {};
     let buffer = [];
     for(let item of require('./cdn')) {
-        externals[item.moduleName] = item.globalName;
-        buffer.push(`<script src="${item.cdnUrl}"></script>`);
+        if (undefined !== item.js) {
+            externals[item.moduleName] = item.globalName;
+            buffer.push(`<script src="${item.js}"></script>`);
+        }
+        if (undefined !== item.css) {
+            buffer.push(`<link href="${item.css}" rel="stylesheet">`);
+        }
     }
+    console.log();
     // <%= cdnResources %>
     resources['cdnResources'] = buffer.join('\n');
     return [externals, resources];
 })();
+console.log(cdnExternals);
 
 module.exports = {
     mode: isProd ? 'production' : 'development',
@@ -73,7 +80,7 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.js', '.vue'],
         alias: {
-            'vue$': 'vue/dist/vue.esm.js'
+            'vue$': 'vue/dist/vue.esm.js',
         }
     },
     module: {

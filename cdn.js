@@ -1,10 +1,16 @@
 // https://www.bootcdn.cn/
-const cdnHost = 'https://cdn.bootcdn.net/ajax/libs';
 module.exports = [
     // {
     //     moduleName: 'vue',
-    //     globalName: 'Vue',
-    //     cdnUrl: `${cdnHost}/vue/2.6.12/vue.min.js`
+    //     globalName: {
+    //         commonjs: 'Vue',
+    //         root: '_'
+    //       },
+    //     js: 'https://cdn.bootcss.com/vue/2.6.12/vue.min.js',
+    // },
+    // {
+    //     moduleName: 'vue-router',
+    //     globalName: 'VueRouter',
+    //     js: 'https://unpkg.com/vue-router@3.4.9/dist/vue-router.js'
     // }
-    // ['vue-router', 'VueRouter', ''],
 ];
