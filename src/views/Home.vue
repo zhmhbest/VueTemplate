@@ -9,14 +9,11 @@
 
 <script lang="ts">
     import $$ from "../library"
-    export default {
+    export default $$.Vue.extend({
         name: "home",
         mounted() {
-            const hello: string = "Hello Vue!";
-            console.log(hello);
-            $$.sayHello();
         }
-    }
+    });
 </script>
 
 <style lang="scss" scoped>

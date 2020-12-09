@@ -1,7 +1,5 @@
-function sayHello() {
-    console.log("Library");
-}
+import Vue from 'vue'
 
 export default {
-    sayHello
+    Vue
 }
