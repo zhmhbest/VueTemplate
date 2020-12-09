@@ -17,7 +17,7 @@ export default $$.Vue.extend({
     name: "demo-axios",
     data() {
         return {
-            arr: null as Array<String>,
+            arr: [] as Array<String>,
         };
     },
     mounted() {
