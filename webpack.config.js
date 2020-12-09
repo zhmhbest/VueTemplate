@@ -10,6 +10,20 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
+// 引入CDN资源
+const [cdnExternals, cdnResources] = (() => {
+    let externals = {};
+    let resources = {};
+    let buffer = [];
+    for(let item of require('./cdn')) {
+        externals[item.moduleName] = item.globalName;
+        buffer.push(`<script src="${item.cdnUrl}"></script>`);
+    }
+    // <%= cdnResources %>
+    resources['cdnResources'] = buffer.join('\n');
+    return [externals, resources];
+})();
+
 module.exports = {
     mode: isProd ? 'production' : 'development',
     entry: {
@@ -26,6 +40,7 @@ module.exports = {
         contentBase: false, //已经拷贝
         compress: true
     },
+    externals: cdnExternals, // CDN配置
     plugins: [
         new CopyWebpackPlugin({
             patterns: [{
@@ -37,11 +52,12 @@ module.exports = {
             }, ]
         }),
         new HtmlWebpackPlugin({
-            template: 'src/index.html', // 模板HTML文件路径
-            filename: 'index.html', // 打包后HTML文件名称
+            template: 'src/index.ejs',          // 模板HTML文件路径
+            filename: 'index.html',             // 打包后HTML文件名称
+            templateParameters: {...cdnResources}, // 模板参数
             minify: { // 优化操作
-                removeAttributeQuotes: isProd, // 删除多余的双引号
-                collapseWhitespace: isProd, // 删除换行
+                removeAttributeQuotes: isProd,  // 删除多余的双引号
+                collapseWhitespace: isProd,     // 删除换行
                 hash: isDev
             }
         }),
