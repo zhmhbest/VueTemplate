@@ -7,6 +7,7 @@
             >
             <a-button type="primary" value="small" href="#/demo/axios">demo-axios</a-button>
             <a-button type="primary" value="small" href="#/demo/echarts">demo-echarts</a-button>
+            <a-button type="primary" value="small" href="#/demo/com">demo-com</a-button>
         </div>
         <div class="frame-medium">
             <div class="frame-left">Left</div>

@@ -17,6 +17,7 @@ addView('Home', '/');
 addView('About');
 addView('demo/Axios');
 addView('demo/Echarts');
+addView('demo/Com');
 
 export default new VueRouter({
     routes
