@@ -1,6 +1,9 @@
-import VueRouter, { RouteConfig } from 'vue-router'
-import Vue from 'vue'
+// import Vue from 'vue'
+// import VueRouter from 'vue-router'
+import { Vue, VueRouter } from '../library'
+import { RouteConfig } from 'vue-router'
 Vue.use(VueRouter);
+
 const routes: Array<RouteConfig> = [];
 function addView(name: string, url?: string) {
     routes.push({
