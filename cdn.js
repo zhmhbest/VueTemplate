@@ -7,9 +7,14 @@ module.exports = [
         globalName: 'Vue',
         js: 'https://cdn.bootcss.com/vue/2.6.12/vue.min.js',
     },
-    // {
-    //     moduleName: 'vue-router',
-    //     globalName: 'VueRouter',
-    //     js: 'https://cdn.bootcss.com/vue-router/3.4.9/vue-router.min.js'
-    // }
+    {
+        moduleName: 'vue-router',
+        globalName: 'VueRouter',
+        js: 'https://cdn.bootcss.com/vue-router/3.4.9/vue-router.min.js'
+    },
+    {
+        moduleName: 'vuex',
+        globalName: 'Vuex',
+        js: 'https://cdn.bootcss.com/vuex/3.5.1/vuex.min.js'
+    }
 ];
