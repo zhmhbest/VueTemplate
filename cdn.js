@@ -1,4 +1,6 @@
 // https://www.bootcdn.cn/
+// https://cdn.bootcss.com
+
 module.exports = [
     // {
     //     moduleName: 'vue',
@@ -11,6 +13,6 @@ module.exports = [
     // {
     //     moduleName: 'vue-router',
     //     globalName: 'VueRouter',
-    //     js: 'https://unpkg.com/vue-router@3.4.9/dist/vue-router.js'
+    //     js: 'https://cdn.bootcss.com/vue-router/3.4.9/vue-router.min.js'
     // }
 ];
