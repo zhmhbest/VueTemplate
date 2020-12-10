@@ -27,9 +27,10 @@ const [cdnExternals, cdnResources] = (() => {
     console.log();
     // <%= cdnResources %>
     resources['cdnResources'] = buffer.join('\n');
+    console.log(externals);
     return [externals, resources];
 })();
-console.log(cdnExternals);
+
 
 module.exports = {
     mode: isProd ? 'production' : 'development',
@@ -47,7 +48,7 @@ module.exports = {
         contentBase: false, //已经拷贝
         compress: true
     },
-    externals: cdnExternals, // CDN配置
+    externals: {...cdnExternals}, // CDN配置
     plugins: [
         new CopyWebpackPlugin({
             patterns: [{
