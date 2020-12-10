@@ -24,21 +24,39 @@ export {
 
 
 /*
+ * Echarts
+ */
+import * as echarts from 'echarts'
+if (undefined === echarts)
+    // @ts-ignore
+    echarts = require('echarts'); // CDN修正
+
+
+/*
  * Ant-Design
  */
 import Antd from 'ant-design-vue';
-import 'ant-design-vue/dist/antd.css';
+if (undefined === Antd) {
+    // @ts-ignore
+    Antd = require('ant-design-vue'); // CDN修正
+    // CSS已自动引入
+} else {
+    // 若未引入CDN应解除以下注释
+    // require('ant-design-vue/dist/antd.css');
+}
 Vue.use(Antd);
 
 
 /*
  * Others
  */
-import * as echarts from 'echarts'
 import axios from 'axios'
+if (undefined === axios)
+    // @ts-ignore
+    axios = require('axios'); // CDN修正
 
 
-// $$
+// export $$
 export default {
     Vue,
     axios,
