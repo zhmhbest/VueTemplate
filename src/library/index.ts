@@ -48,7 +48,7 @@ Vue.use(Antd);
 
 
 /*
- * Others
+ * Axios
  */
 import axios from 'axios'
 if (undefined === axios)
