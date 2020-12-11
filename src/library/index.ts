@@ -59,6 +59,7 @@ if (undefined === axios)
 // export $$
 export default {
     Vue,
+    echarts,
+    Antd,
     axios,
-    echarts
 }
