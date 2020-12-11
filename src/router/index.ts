@@ -13,11 +13,14 @@ function addView(name: string, url?: string) {
     });
 }
 
-addView('Home', '/');
-addView('About');
-addView('demo/Axios');
-addView('demo/Echarts');
-addView('demo/Com');
+import RouterTable from './table.json5'
+for(let item of RouterTable) {
+    if (item instanceof Object) {
+        addView(item['view'], item['path']);
+    } else if ('string' === typeof item) {
+        addView(item);
+    }
+}
 
 export default new VueRouter({
     routes

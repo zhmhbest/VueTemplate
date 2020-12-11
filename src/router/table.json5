@@ -1,0 +1,10 @@
+[
+    {
+        view: 'Home',
+        path: '/'
+    },
+    'About',
+    'demo/Axios',
+    'demo/Echarts',
+    'demo/Com'
+]
