@@ -1,7 +1,7 @@
 <template>
     <div id="home">
         <h2>Hello Vue</h2>
-        <div>
+        <div v-for="index of 5" :key="index">
             <img alt="" src="static/images/arrow_girl.png" />
         </div>
     </div>
