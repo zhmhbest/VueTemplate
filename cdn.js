@@ -27,7 +27,7 @@ const cdnList = [
         globalName: 'antd',
         js: 'https://cdn.bootcss.com/ant-design-vue/1.7.2/antd.min.js',
         // 定制主题时不引入CDN CSS
-        // css: 'https://cdn.bootcss.com/ant-design-vue/1.7.2/antd.min.css'
+        css: 'https://cdn.bootcss.com/ant-design-vue/1.7.2/antd.min.css'
     },
     {
         moduleName: 'axios',
