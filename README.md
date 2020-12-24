@@ -45,7 +45,7 @@ npm -D i open-browser-webpack-plugin
 # Json5
 npm -D i json5-loader
 # Images
-npm -D i url-loader
+npm -D i file-loader url-loader
 # Style
 npm -D i mini-css-extract-plugin css-loader
 npm -D i sass-loader sass@npm:dart-sass
