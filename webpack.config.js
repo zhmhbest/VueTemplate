@@ -115,11 +115,31 @@ module.exports = {
             }]
         },
         {
-            test: /\.(sa|sc|c)ss$/i,
+            test: /\.css$/i,
+            use: [
+                MiniCssExtractPlugin.loader,
+                'css-loader'
+            ]
+        },
+        {
+            test: /\.(sass|scss)$/i,
             use: [
                 MiniCssExtractPlugin.loader,
                 'css-loader',
                 'sass-loader'
+            ]
+        },
+        {
+            test: /\.less$/i,
+            use: [
+                MiniCssExtractPlugin.loader,
+                'css-loader',
+                {
+                    loader: 'less-loader',
+                    options: {
+
+                    }
+                }
             ]
         },
         {
