@@ -1,5 +1,6 @@
 // 加载通用设置
 import "./index.scss"
+import "./index.less"
 const domLink: HTMLLinkElement = document.querySelector("head link[rel='shortcut icon']");
 domLink.href = require("./favicon.ico").default;
 const domTitle: HTMLTitleElement = document.querySelector("head title");
