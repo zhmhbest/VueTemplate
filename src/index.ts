@@ -1,10 +1,11 @@
-// 加载通用设置
+// 加载 样式、标题、图标
 import "./index.scss"
 import "./index.less"
 const domLink: HTMLLinkElement = document.querySelector("head link[rel='shortcut icon']");
 domLink.href = require("./favicon.ico").default;
 const domTitle: HTMLTitleElement = document.querySelector("head title");
 domTitle.innerHTML = "Hello Vue";
+
 
 // 加载Vue
 // import Vue from 'vue'

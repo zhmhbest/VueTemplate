@@ -137,7 +137,13 @@ module.exports = {
                 {
                     loader: 'less-loader',
                     options: {
-
+                        lessOptions: {
+                            // 定制Vue主题(https://www.antdv.com/docs/vue/customize-theme-cn/)
+                            modifyVars: {
+                                'primary-color': '#1DA57A',
+                            },
+                            javascriptEnabled: true
+                        }
                     }
                 }
             ]

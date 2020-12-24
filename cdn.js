@@ -26,7 +26,8 @@ const cdnList = [
         moduleName: 'ant-design-vue',
         globalName: 'antd',
         js: 'https://cdn.bootcss.com/ant-design-vue/1.7.2/antd.min.js',
-        css: 'https://cdn.bootcss.com/ant-design-vue/1.7.2/antd.min.css'
+        // 定制主题时不引入CDN CSS
+        // css: 'https://cdn.bootcss.com/ant-design-vue/1.7.2/antd.min.css'
     },
     {
         moduleName: 'axios',
@@ -35,5 +36,5 @@ const cdnList = [
     },
 ];
 
-module.exports = [];
-// module.exports = cdnList;
+// module.exports = [];
+module.exports = cdnList;

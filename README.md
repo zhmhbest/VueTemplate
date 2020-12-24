@@ -49,7 +49,7 @@ npm -D i file-loader url-loader
 # Style
 npm -D i mini-css-extract-plugin css-loader
 npm -D i sass-loader sass@npm:dart-sass
-npm -D i less-loader less
+npm -D i less-loader less@3
 # Typescript
 npm -D i @types/node
 npm -D i typescript ts-loader
