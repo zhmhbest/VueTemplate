@@ -1,7 +1,7 @@
-/yarn.lock
-/package-lock.json
-/node_modules/
-/dist/
-dump/
 /.idea/
 /.vscode/
+
+/node_modules/
+/yarn.lock
+/package-lock.json
+/dist/
