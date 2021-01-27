@@ -5,22 +5,25 @@ import Vue from 'vue'
 if (undefined === Vue)
     // @ts-ignore
     Vue = require('vue'); // CDN修正
-
 import VueRouter from 'vue-router'
 if (undefined === VueRouter)
     // @ts-ignore
     VueRouter = require('vue-router'); // CDN修正
-
 import Vuex from 'vuex'
 if (undefined === Vuex)
     // @ts-ignore
     Vuex = require('vuex'); // CDN修正
-
 export {
     Vue,
     VueRouter,
     Vuex
 };
+
+
+/*
+ * Store
+ */
+import store from "../store";
 
 
 /*
@@ -58,6 +61,7 @@ if (undefined === axios)
 
 // export $$
 export default {
+    store,
     Vue,
     echarts,
     Antd,
