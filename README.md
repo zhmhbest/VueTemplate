@@ -2,9 +2,7 @@
 
 手动搭建一个使用[Webpack](https://v4.webpack.js.org/concepts/)打包的，支持[Typescript](https://www.tslang.cn/docs/home.html)、[Sass](https://www.sass.hk/)、[Vue](https://cn.vuejs.org/)、[Ant Design](https://www.antdv.com/docs/vue/introduce-cn/)等技术的前端开发模板。
 
-## 效果预览
-
-[预览](https://zhmhbest.github.io/VueTemplate/index.html#/)
+>[效果预览](https://zhmhbest.github.io/VueTemplate/index.html#/)
 
 ## 直接使用
 
