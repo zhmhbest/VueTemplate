@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3>{{ title }}</h3>
-        <a-input @change="onChange" />
+        <input style="width: 90%; margin-left: 5%" type="text" @change="onChange" ref="myText"/>
     </div>
 </template>
 
@@ -14,8 +14,9 @@ export default $$.Vue.extend({
         return {};
     },
     methods: {
-        onChange(e: InputEvent) {
-            this.$emit('oninsert', e.data);
+        onChange(ev: Event) {
+            const it = this.$refs["myText"] as HTMLInputElement;
+            this.$emit('oninsert', it.value);
         },
     },
 });
