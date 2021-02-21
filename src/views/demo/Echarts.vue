@@ -1,5 +1,7 @@
 <template>
     <div>
+        <div>{{$route.name}}={{$route.meta['opened']}}</div>
+        <button @click="closeView()">清理页面缓存</button>
         <h2>This is an demo-Echarts page</h2>
         <div id="graph" @click="paintGraph">点击画图</div>
     </div>
@@ -18,6 +20,10 @@ export default $$.Vue.extend({
         this.graph = document.querySelector("#graph");
     },
     methods: {
+        closeView() {
+            console.log(this.$route.meta);
+            this.$route.meta.opened = false;
+        },
         paintGraph() {
             let chart = $$.echarts.init(this.graph);
             chart.setOption({

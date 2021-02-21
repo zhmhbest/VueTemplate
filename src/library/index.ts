@@ -27,6 +27,12 @@ import store from "../store";
 
 
 /*
+ * Router
+ */
+import router from "../router";
+
+
+/*
  * Echarts
  */
 import * as echarts from 'echarts'
@@ -62,6 +68,7 @@ if (undefined === axios)
 // export $$
 export default {
     store,
+    router,
     Vue,
     echarts,
     Antd,

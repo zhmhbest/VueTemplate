@@ -17,7 +17,7 @@
             <div class="frame-main" :style="{
                 minWidth: `${windowWidth - frameLayoutLeftWidth - frameLayoutRightWidth}px`,
                 maxWidth: `${windowWidth - frameLayoutLeftWidth - frameLayoutRightWidth}px`
-            }"><router-view /></div>
+            }"><keep-alive><router-view /></keep-alive></div>
             <div class="frame-right" :style="{
                 minWidth: `${frameLayoutRightWidth}px`, maxWidth: `${frameLayoutRightWidth}px`
             }"></div>
@@ -32,6 +32,9 @@
 import $$ from "./library";
 export default $$.Vue.extend({
     name: "app",
+    data() {
+        return {}
+    },
     computed: {
         windowWidth() { return $$.store.state.windowWidth },
         windowHeight() { return $$.store.state.windowHeight },
