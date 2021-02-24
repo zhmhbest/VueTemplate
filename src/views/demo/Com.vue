@@ -12,7 +12,7 @@
 import $$ from "../../library";
 import Com_Text from "../../components/Text.vue";
 export default $$.Vue.extend({
-    name: "Com",
+    name: "demo-com",
     data() {
         return {
             com_title: "刚输入的内容" as String
