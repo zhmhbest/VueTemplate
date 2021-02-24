@@ -4,7 +4,9 @@
         path: '/'
     },
     'About',
+    'demo/Imgs',
     'demo/Axios',
     'demo/Echarts',
-    'demo/Com'
+    'demo/Com',
+    'demo/Layout'
 ]

@@ -14,7 +14,6 @@
 <script lang="ts">
 import $$ from "../../library";
 export default $$.Vue.extend({
-    name: "demo-axios",
     data() {
         return {
             arr: [] as Array<String>,

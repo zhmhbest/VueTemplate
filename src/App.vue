@@ -3,7 +3,8 @@
         minWidth: `${windowWidth}px`, maxWidth: `${windowWidth}px`,
         minHeight: `${windowHeight}px`, maxHeight: `${windowHeight}px`,
     }">
-        <div class="frame-top" :style="{
+        <!-- TOP -->
+        <div class="frame-top" v-if="frameLayoutTopHeight>0" :style="{
             width: '100%', minHeight: `${frameLayoutTopHeight}px`, maxHeight: `${frameLayoutTopHeight}px`
         }"></div>
         <div class="frame-medium col-container" :style="{
@@ -11,18 +12,22 @@
             minHeight: `${windowHeight - frameLayoutTopHeight - frameLayoutBottomHeight}px`,
             maxHeight: `${windowHeight - frameLayoutTopHeight - frameLayoutBottomHeight}px`
         }">
-            <div class="frame-left" :style="{
+            <!-- LEFT -->
+            <div class="frame-left" v-if="frameLayoutLeftWidth>0" :style="{
                 minWidth: `${frameLayoutLeftWidth}px`, maxWidth: `${frameLayoutLeftWidth}px`
             }"></div>
+            <!-- MAIN -->
             <div class="frame-main" :style="{
                 minWidth: `${windowWidth - frameLayoutLeftWidth - frameLayoutRightWidth}px`,
                 maxWidth: `${windowWidth - frameLayoutLeftWidth - frameLayoutRightWidth}px`
             }"><keep-alive><router-view /></keep-alive></div>
-            <div class="frame-right" :style="{
+            <!-- RIGHT -->
+            <div class="frame-right" v-if="frameLayoutRightWidth>0" :style="{
                 minWidth: `${frameLayoutRightWidth}px`, maxWidth: `${frameLayoutRightWidth}px`
             }"></div>
         </div>
-        <div class="frame-bottom" :style="{
+        <!-- BOTTOM -->
+        <div class="frame-bottom" v-if="frameLayoutBottomHeight>0" :style="{
             width: '100%', minHeight: `${frameLayoutBottomHeight}px`, maxHeight: `${frameLayoutBottomHeight}px`
         }"></div>
     </div>
@@ -38,7 +43,7 @@ export default $$.Vue.extend({
     computed: {
         windowWidth() { return $$.store.state.windowWidth },
         windowHeight() { return $$.store.state.windowHeight },
-        locationHash() { return $$.store.state.locationHash },
+        // locationHash() { return $$.store.state.locationHash },
         frameLayoutTopHeight() { return 10 },
         frameLayoutBottomHeight() { return 10 },
         frameLayoutLeftWidth() { return 10 },
@@ -50,6 +55,7 @@ export default $$.Vue.extend({
             $$.store.commit("windowRect");
         };
         $$.store.commit("windowRect");
+
         // 绑定目录Hash改变
         window.onhashchange = function(this: WindowEventHandlers, ev: HashChangeEvent) {
             $$.store.commit("locationHash");
@@ -66,9 +72,6 @@ export default $$.Vue.extend({
         background-color: palevioletred;
     }
     .frame-medium {
-        // display: flex;
-        // flex-wrap: nowrap;
-        // justify-content: space-between;
         .frame-left {
             background-color: peru;
         }
@@ -80,6 +83,7 @@ export default $$.Vue.extend({
                 // 自定义滚动条——宽度
                 &::-webkit-scrollbar{
                     width: 8px;
+                    height: 8px;
                 }
                 // 自定义滚动条——背景色
                 &::-webkit-scrollbar {
@@ -97,7 +101,6 @@ export default $$.Vue.extend({
         }
     }
     .frame-bottom {
-        display: flex;
         background-color: rgb(100, 237, 184);
     }
 }

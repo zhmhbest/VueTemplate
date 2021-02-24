@@ -10,7 +10,6 @@
 <script lang="ts">
 import $$ from "../../library";
 export default $$.Vue.extend({
-    name: "demo-echarts",
     data() {
         return {
             graph: null as HTMLDivElement,

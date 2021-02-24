@@ -7,13 +7,11 @@
             <a-button type="primary" value="small" href="#/about"
                 >About</a-button
             >
-            <a-button type="primary" value="small" href="#/demo/axios">demo-axios</a-button>
-            <a-button type="primary" value="small" href="#/demo/echarts">demo-echarts</a-button>
-            <a-button type="primary" value="small" href="#/demo/com">demo-com</a-button>
-        </div>
-
-        <div v-for="index of 5" :key="index">
-            <img alt="" src="static/images/arrow_girl.png" />
+            <a-button type="primary" value="small" href="#/demo/imgs">imgs</a-button>
+            <a-button type="primary" value="small" href="#/demo/axios">axios</a-button>
+            <a-button type="primary" value="small" href="#/demo/echarts">echarts</a-button>
+            <a-button type="primary" value="small" href="#/demo/com">com</a-button>
+            <a-button type="primary" value="small" href="#/demo/layout">layout</a-button>
         </div>
     </div>
 </template>
